@@ -100,4 +100,12 @@ documentation [here](https://vuejs.org/v2/guide/).
 Styles are found in `src/scss/styles.scss`.  Any changes to this file will require
 you to rebuild using `npm run development` or `npm run watch`
 
-Icons are provided through fontawesome.  You can see the entire icon set at [https://fontawesome.com/icons](https://fontawesome.com/icons)
+### Vuetify
+This project uses a component based css framework called vuetify.  You can
+find all of the component documentation [here](https://vuetifyjs.com/en/components/api-explorer)
+
+Icons are provided through fontawesome.  You can see the complete icon set at [https://fontawesome.com/icons](https://fontawesome.com/icons)
+
+## Tasks
+
+1. Change the green 

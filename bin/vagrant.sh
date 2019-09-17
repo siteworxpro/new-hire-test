@@ -107,10 +107,17 @@ general_log             = 1" | tee -a /etc/mysql/mysql.conf.d/mysqld.cnf
     mysql -uroot -ppassword -e "create database vagrant"
 }
 
+function installTestAndLintSettings() {
+    cp /home/vagrant/Code/bin/vagrant_bash_aliases.sh /home/vagrant/.bash_aliases
+    chown vagrant:vagrant /home/vagrant/.bash_aliases
+}
+
+
 installDefaults
 installComposer
 installMysql
 installXdebug
+installTestAndLintSettings
 
 cd /home/vagrant/Code
 chmod +x ./bin/deploy.sh
