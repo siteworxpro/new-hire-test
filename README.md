@@ -48,7 +48,8 @@ ssh into your development environment
 
 `/App`
 
-This is the main app source folder.  All php source files are found in this folder.
+This is the main app source folder.  All php source files are found in this folder. The core of the
+application is in `library/App.php`
 
 `/App/Views`
 
