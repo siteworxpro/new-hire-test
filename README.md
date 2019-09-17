@@ -111,7 +111,7 @@ This project uses php version 7.3. All of the documentation is available here [h
 this project uses vue.js as it's framework. you can find the development
 documentation [here](https://vuejs.org/v2/guide/).
 
-###commands
+### commands
 
 `npm run development`  Build the application in development mode
 
