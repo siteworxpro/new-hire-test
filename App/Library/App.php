@@ -4,6 +4,7 @@ namespace App\Library;
 
 use App\Controllers\Api\V1\HealthCheckController;
 use App\Controllers\Web\IndexController;
+use Psr\Container\ContainerInterface;
 use Slim\App as SlimApp;
 
 /**
@@ -46,7 +47,7 @@ class App extends SlimApp
     }
 
     /**
-     * @return Container|\Psr\Container\ContainerInterface
+     * @return Container|ContainerInterface
      */
     public static function di(): Container
     {

@@ -2,8 +2,7 @@
 
 namespace App\Controllers;
 
-use Slim\Http\Request;
-use Slim\Http\Response;
+use Slim\Http\{Request, Response};
 
 /**
  * Interface ControllerInterface
@@ -74,45 +73,4 @@ interface ControllerInterface
      */
     public function patchAction(Request $request, Response $response, array $params): Response;
 
-    /**
-     * required fields for post request
-     * @param Request $request
-     * @return array
-     */
-    public static function postRequestSignature(Request $request): array;
-
-    /**
-     * signature for a put request
-     * @param Request $request
-     * @return array
-     */
-    public static function putRequestSignature(Request $request): array;
-
-    /**
-     * signature for a get request
-     * @param Request $request
-     * @return array
-     */
-    public static function getRequestSignature(Request $request): array;
-
-    /**
-     * signature for a delete request
-     * @param Request $request
-     * @return array
-     */
-    public static function deleteRequestSignature(Request $request): array;
-
-    /**
-     * signature for a options request
-     * @param Request $request
-     * @return array
-     */
-    public static function optionsRequestSignature(Request $request): array;
-
-    /**
-     * signature for a patch request
-     * @param Request $request
-     * @return array
-     */
-    public static function patchRequestSignature(Request $request): array;
 }
