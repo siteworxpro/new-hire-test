@@ -102,7 +102,9 @@ to create a migration
 
 This project uses php version 7.3. All of the documentation is available here [https://www.php.net/docs.php](https://www.php.net/docs.php)
 
-Slim PHP is the framework used.  You can find specific documentation here [http://www.slimframework.com/docs/v3/](http://www.slimframework.com/docs/v3/)
+*Slim PHP* is the framework used.  You can find specific documentation here [http://www.slimframework.com/docs/v3/](http://www.slimframework.com/docs/v3/)
+
+*Eloquent ORM* is used for the model layer. Documentation can be found [here](https://laravel.com/docs/5.0/eloquent) on it's use
 
 ## Javascript
 
@@ -139,7 +141,25 @@ The application will be able to
 ### Steps
 1. Replace the index page header with an appropriate application welcome banner.
 
-2. Add a webform that will allow the user to add a new company.
+2. Add a web form that will allow the user to add a new company.
     - form should include an input for company name
     
-3. Add an endpoint to save 
+3. Add an endpoint to save the new company to the database
+
+4. Add a delete button to the company list ui
+
+5. Add endpoint to delete company
+
+6. Add a migration that will create a contact as a child of the company model
+    - Add a new contact model
+        - contact model will have columns (name, phone, email)
+
+7. Add a form that will allow the user to add a contact to the company
+
+8. Add an endpoint that will save the contacts to the database
+
+9. Add delete button to company contact
+
+10. Add delete endpoint for company contact
+
+11. (Extra Credit)  Add search feature to company list
