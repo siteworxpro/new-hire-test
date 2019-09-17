@@ -2,6 +2,7 @@
 
 namespace App\Library;
 
+use App\Controllers\Api\V1\CompanyController;
 use App\Controllers\Api\V1\HealthCheckController;
 use App\Controllers\Web\IndexController;
 use Psr\Container\ContainerInterface;
@@ -42,6 +43,9 @@ class App extends SlimApp
         $this->group('/api', function () {
             $this->group('/v1', function () {
                 $this->get('/health_check', HealthCheckController::class . ':getAction');
+                $this->group('/company', function () {
+                    $this->get('[/{id}]', CompanyController::class . ':getAction');
+                });
             });
         });
     }
