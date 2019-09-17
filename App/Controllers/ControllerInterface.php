@@ -72,5 +72,4 @@ interface ControllerInterface
      * @return Response
      */
     public function patchAction(Request $request, Response $response, array $params): Response;
-
 }

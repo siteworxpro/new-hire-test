@@ -4,6 +4,8 @@
     <config name="installed_paths" value="vendor/slevomat/coding-standard"/>
     <config name="installed_paths" value="vendor/squizlabs/php_codesniffer/src"/>
 
+    <rule ref="vendor/squizlabs/php_codesniffer/src/Standards/PSR12/ruleset.xml"/>
+
     <!-- specific sniffs to include -->
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/DeclareStrictTypesSniff.php" />
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/ReturnTypeHintSpacingSniff.php" />

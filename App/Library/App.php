@@ -41,7 +41,7 @@ class App extends SlimApp
     {
         $this->group('/api', function () {
             $this->group('/v1', function () {
-               $this->get('/health_check', HealthCheckController::class . ':getAction');
+                $this->get('/health_check', HealthCheckController::class . ':getAction');
             });
         });
     }
