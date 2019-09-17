@@ -19,6 +19,8 @@ return [
         */
         'db' => [
             'driver' => 'sqlite',
+            'username' => '',
+            'password' => '',
             'host' => './tests/_data/database.sqlite3',
             'database' => dirname(__FILE__, 3) . '/tests/_data/database.sqlite3',
             'charset'   => 'utf8',

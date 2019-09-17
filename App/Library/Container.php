@@ -2,7 +2,6 @@
 
 namespace App\Library;
 
-use App\Library\OAuth\{AccessTokenRepository, ClientRepository, Entities\AccessToken, Entities\Client, ScopeRepository};
 use Carbon\Carbon;
 use League\OAuth2\Server\{AuthorizationServer, Grant\ClientCredentialsGrant, ResourceServer};
 use Monolog\Handler\{RotatingFileHandler, StreamHandler};
@@ -19,8 +18,6 @@ use Whoops\{Handler\JsonResponseHandler, Handler\PrettyPageHandler, Run};
  *
  * @property Config config
  * @property Logger log
- * @property Client client
- * @property AccessToken token
  * @property Twig view
  * @property Response response
  * @property ResourceServer resourceServer
@@ -103,59 +100,6 @@ final class Container extends SlimContainer
             $twig->addGlobal('year', Carbon::now()->format('Y'));
 
             return $twig;
-        };
-
-        /*
-        |--------------------------------------------------------------------------
-        | oAuth Resource Server
-        |--------------------------------------------------------------------------
-        */
-        $this['resourceServer'] = function () {
-            $accessTokenRepository = new AccessTokenRepository();
-            $privateKey = $this->config->get('run_dir') . '/authorization.key';
-
-            return new ResourceServer(
-                $accessTokenRepository,
-                $privateKey
-            );
-        };
-
-        /*
-        |--------------------------------------------------------------------------
-        | oAuth Server
-        |--------------------------------------------------------------------------
-        */
-        $this['oAuthServer'] = function () {
-
-            $clientRepository = new ClientRepository();
-            $scopeRepository = new ScopeRepository();
-            $accessTokenRepository = new AccessTokenRepository();
-
-            $privateKey = $this->config->get('run_dir') . '/authorization.key';
-            $encryptionKey = $this->config->get('encryption_key');
-
-            if ($encryptionKey === null) {
-                throw new \RuntimeException('Encryption key is missing from config');
-            }
-
-            $server = new AuthorizationServer(
-                $clientRepository,
-                $accessTokenRepository,
-                $scopeRepository,
-                $privateKey,
-                $encryptionKey
-            );
-
-            try {
-                $server->enableGrantType(
-                    new ClientCredentialsGrant(),
-                    new \DateInterval($this->config->get('dev_mode', false) ? 'P1M' : 'PT1H')
-                );
-            } catch (\Exception $exception) {
-                $this->log->critical($exception->getMessage());
-            }
-
-            return $server;
         };
 
         $this->registerErrorHandlers();

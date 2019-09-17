@@ -12,6 +12,8 @@ class InitialMigration extends AbstractMigration
 {
     public function change(): void
     {
-
+        $this->table('companies')
+            ->addColumn('name', 'string', ['null' => false])
+            ->create();
     }
 }

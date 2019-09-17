@@ -16,16 +16,20 @@ You will need
 - NodeJS
     - [download](https://nodejs.org/en/download/current/)
     
-Once you have downloaded and installed the supporting applications you can start your 
+1. Once you have downloaded and installed the supporting applications you can start your 
 development environment using the command `vagrant up` from the project root
 
-you will need to edit your hosts file and add the local entry `192.168.33.10 vagrant.local`
+2. you will need to edit your hosts file and add the local entry `192.168.33.10 vagrant.local`
 
-You will then need to install and build your node dependencies with `npm install`
+3. You will then need to install and build your node dependencies with `npm install`
 
-You can then build the javascript for the app `npm run development`
+4. You can then build the javascript for the app `npm run development`
 
-Your app should be up and running and accessible from [http://vagrant.local](http://vagrant.local)
+5. Your app should be up and running and accessible from [http://vagrant.local](http://vagrant.local)
+
+6. profit
+
+## Expanded Help
 
 ### Vagrant commands
 
@@ -108,4 +112,4 @@ Icons are provided through fontawesome.  You can see the complete icon set at [h
 
 ## Tasks
 
-1. Change the green 
+1. Change the green banner 
