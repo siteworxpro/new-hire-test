@@ -1,6 +1,8 @@
 <template>
-  <v-alert type="success">
-    <v-icon>fad fa-check</v-icon>
+  <v-alert
+    type="success"
+    icon="fas fa-check"
+  >
     {{ message }}
   </v-alert>
 </template>

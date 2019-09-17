@@ -48,6 +48,18 @@ Force a re-run the vagrant provisioning script.  The script will skip any
 `vagrant ssh`
 ssh into your development environment 
 
+### bash commands
+
+There are shell commands within the vagrant environment to help you with common tasks
+
+`run_mode` resets the app back to development run mode
+
+`test_mode` sets the app to run in test mode 
+
+`run_lint` runs the complete code lint
+
+`run_unit_tests`  run all of the unit tests
+
 ## Directory Descriptions
 
 `/App`
@@ -86,6 +98,12 @@ to create a migration
 5. When you are ready to run your migration `./vendor/bin/phinx migrate`
 6. (optional) if you need to roll your migration back`./vendor/bin/phinx rollback`
 
+## PHP
+
+This project uses php version 7.3. All of the documentation is available here [https://www.php.net/docs.php](https://www.php.net/docs.php)
+
+Slim PHP is the framework used.  You can find specific documentation here [http://www.slimframework.com/docs/v3/](http://www.slimframework.com/docs/v3/)
+
 ## Javascript
 
 this project uses vue.js as it's framework. you can find the development
@@ -112,4 +130,16 @@ Icons are provided through fontawesome.  You can see the complete icon set at [h
 
 ## Tasks
 
-1. Change the green banner 
+The overall purpose of this sample application will be to create a company contacts list.
+
+The application will be able to
+- Store multiple companies.
+- Store multiple contacts for each company.
+
+### Steps
+1. Replace the index page header with an appropriate application welcome banner.
+
+2. Add a webform that will allow the user to add a new company.
+    - form should include an input for company name
+    
+3. Add an endpoint to save 

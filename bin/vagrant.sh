@@ -20,6 +20,7 @@ function installDefaults() {
     php7.3-xml \
     php7.3-mbstring \
     php7.3-mysql \
+    php7.3-sqlite \
     php7.3-zip \
     supervisor \
     build-essential \
