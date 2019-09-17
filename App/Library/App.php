@@ -29,7 +29,7 @@ class App extends SlimApp
     private function registerRoutes(): void
     {
         $this->registerApiV1();
-        $this->registerWeb(); // remove if only api
+        $this->registerWeb();
     }
 
     private function registerWeb(): void
