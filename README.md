@@ -94,3 +94,10 @@ documentation [here](https://vuejs.org/v2/guide/).
 `npm run watch`  Build the application in development mode and watch for file changes
 
 `npm run production` Build the application in production mode.  Development tools are unavailable.
+
+## CSS/FontAwesome
+
+Styles are found in `src/scss/styles.scss`.  Any changes to this file will require
+you to rebuild using `npm run development` or `npm run watch`
+
+Icons are provided through fontawesome.  You can see the entire icon set at [https://fontawesome.com/icons](https://fontawesome.com/icons)
