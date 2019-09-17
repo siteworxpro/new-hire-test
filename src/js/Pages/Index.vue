@@ -1,15 +1,11 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="12">
-        <v-row
-          justify="center"
-        >
-          <v-flex md6>
-            <SuccessMessage />
-          </v-flex>
-        </v-row>
-      </v-col>
+    <v-row
+      justify="center"
+    >
+      <v-flex md5>
+        <SuccessMessage />
+      </v-flex>
     </v-row>
   </v-container>
 </template>
