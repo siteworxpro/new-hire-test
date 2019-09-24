@@ -164,7 +164,7 @@ The application will be able to
 
 11. (Extra Credit)  Add search feature to company list
 
-### Checking Process
+### Check In Process
 To return your code back to use create your own github repo.  Follow the instructions to add your remote to the git repository.  Branching is not required and you can make all of your commits to master.  Please try and retain all of your commit history and comments as appropriate.
 
 Send us the link to your git repo when you are finished.
