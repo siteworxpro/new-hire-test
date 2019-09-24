@@ -5,7 +5,7 @@
 Use this guide to setup your development environment.  This project uses a vm to host
 itself in and vagrant to manage the machine.  
 
-You will need to install several supporting application before you can start your environment.
+You will need to install several supporting applications before you can start your environment.
 
 You will need
 
@@ -163,3 +163,10 @@ The application will be able to
 10. Add delete endpoint for company contact
 
 11. (Extra Credit)  Add search feature to company list
+
+### Checking Process
+To return your code back to use create your own github repo.  Follow the instructions to add your remote to the git repository.  Branching is not required and you can make all of your commits to master.  Please try and retain all of your commit history and comments as appropriate.
+
+Send us the link to your git repo when you are finished.
+
+Ask as many questions you need if you run into trouble. 
