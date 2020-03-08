@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Library;
 
@@ -11,7 +13,6 @@ use Noodlehaus\Config;
 use Psr\Log\LogLevel;
 use Slim\{Container as SlimContainer, Http\Request, Http\Response, Http\StatusCode};
 use Whoops\{Handler\JsonResponseHandler, Handler\PrettyPageHandler, Run};
-
 
 /**
  * Class Container
